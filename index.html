@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body>div>div>p{
+            font-size: 32px;
+            font-family: "Segoe UI Light", "Segoe UI Semilight", "Segoe UI", serif;
+        }
+        .part{
+            width: 49%;
+            height: 600px;
+            display: inline-block;
+            float: left;
+            border: 1px dashed #cbcbcb;
+            min-width: 400px;
+        }
+        .part2{
+            height:50px;
+        }
+        textarea{
+            width: 99%;
+            height: 480px;
+            font-size: 24px;
+        }
+        button{
+            display: inline;
+            font-size: 24px;
+        }
+        .hidden{
+            visibility: hidden;
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+<div class="part">
+
+<div class="part2">
+    <p class="heading">your HTML markups here:</p>
+</div>
+<textarea id="markuptext">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head lang ="en"&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+    </textarea>
+    <button onclick="changemarkup();">see result</button>
+
+</div>
+
+<div class="part">
+    <div class="part2"><p class="heading">result here:</p></div>
+    <div id="result"></div>
+</div>
+<p class="hidden" id="test"></p>
+<script>
+    function changemarkup(){
+        document.getElementById("result").innerHTML = document.getElementById("markuptext").value;
+    }
+
+
+</script>
+</body>
+</html>
